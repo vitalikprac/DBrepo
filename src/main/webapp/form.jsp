@@ -5,30 +5,24 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-        
-        <form action="<%=request.getContextPath()%>/form" method="post">
-
+<jsp:include page="include/main_header.jsp" />
+<div class="form_wrapper">
+    <form action="<%=request.getContextPath()%>/form" method="post">
+                Fill in form <br>
                 <input type="hidden" name="title" value="Submited"/>
 
-                Full name: <input type="text" name="name"/><br/>
+                 <input type="text" name="name" placeholder="Your name"><br/>
 
                 Gender: 
-                <input type="radio" name="gender" value="male"> Male
-                <input type="radio" name="gender" value="female"> Female <br/>
+                <input type="radio" name="gender" value="male">Male    
+                <input type="radio" name="gender" value="female">Female<br/>
 
                 Languages know: 
-                <input type="checkbox" name="language" value="English"> English
-                <input type="checkbox" name="language" value="Ukrainian"> Ukrainian
-                <input type="checkbox" name="language" value="French"> French <br/>
-
+                <div class="checkb">
+                    <input type="checkbox" name="language" value="English">English
+                    <input type="checkbox" name="language" value="Ukrainian">Ukrainian
+                    <input type="checkbox" name="language" value="French">French <br/>
+                </div>
                 Country: 
                 <select name="country">
                     <option value="Ukraine">Ukraine</option>
@@ -40,5 +34,5 @@
 
                 <input type="submit" value="Submit">   
             </form>
-    </body>
-</html>
+</div>
+<jsp:include page="include/main_footer.jsp" />
