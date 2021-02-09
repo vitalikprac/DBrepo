@@ -5,7 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<jsp:include page="main_header.jsp" />
+<jsp:include page="include/main_header.jsp" />
 
     <h1 class="title">Welcome to Leonid Lunin project!</h1>
             <h2>About me</h2>
@@ -19,4 +19,4 @@
                 </form>
             </div>
                     
-<jsp:include page="main_footer.jsp" />                  
+<jsp:include page="include/main_footer.jsp" />                  
