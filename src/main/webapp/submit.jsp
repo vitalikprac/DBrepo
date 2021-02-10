@@ -6,40 +6,23 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
-<%@page import="org.obrii.mit.dp2021.mykolaichuk.mavenproject5.User"  %>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Submit Page</title>
-    </head>
-    <body>
-        <h1>Submited data:</h1>
+<jsp:include page="include/main_header.jsp" />
 
-        <% User user = (User) request.getAttribute("user");%>      
-        <p><%=user%></p> 
-
-        <p>Alternative User display:</p>
-        <p>Name: <%=user.getName()%></p>
-        <p>(or even this way)</p>
-        <p>Name: <%=request.getParameter("name")%></p>
-        <p>Gender: <%=user.getGender()%></p>
-        <p>Languages: <%=user.getLanguage()%></p>
-        <p>Country: <%=user.getCountry()%></p>
-
-
-
-        <form action="<%=request.getContextPath()%>">
-            <input type="submit" value="Повернутися"/>
-        </form>
-    </body>
-</html>
-<%--
-        <p>Alternative User display:</p>
-        <p>Name: <%=user.getName()%></p>
-        <p>(or even this way)</p>
-        <p>Name: <%=request.getParameter("name")%></p>
-        <p>Gender: <%=user.getGender()%></p>
-        <p>Languages: <%=user.getLanguage()%></p>
-        <p>Country: <%=user.getCountry()%></p>
---%>
+<p>Name is: <%= request.getParameter("name")%></p>
+        <p>Gender is: <%= request.getParameter("gender")%></p>
+        <p>Languages is:</p>
+        <%
+        String[] languages = request.getParameterValues("language");
+        if (languages != null) {
+        for (int i = 0; i < languages.length; i++) {
+                out.print(languages[i]);
+                out.print("<br/>");
+            }                 
+            }else {
+            out.print("Unselected");
+            }
+        %>
+        <br/>
+        <a href="../">Return</a>
+        
+<jsp:include page="include/main_footer.jsp" />

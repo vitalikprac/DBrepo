@@ -31,8 +31,7 @@
                     <option value="Finland">Finland</option>
                     <option value="Fiji">Fiji</option>
                 </select><br/>
-
-                <input type="submit" value="Submit">   
+                <button class="button" type="submit">Submit</button>
             </form>
 </div>
 <jsp:include page="include/main_footer.jsp" />

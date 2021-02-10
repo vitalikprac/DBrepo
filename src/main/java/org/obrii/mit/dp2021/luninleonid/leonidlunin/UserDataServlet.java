@@ -44,9 +44,9 @@ public class UserDataServlet extends HttpServlet {
             throws ServletException, IOException {
         UserContainer user = new UserContainer(
                 request.getParameter("name"),
-                request.getParameter("surname"),
-                request.getParameterValues("countries"),
-                request.getParameter("configuration")
+                request.getParameter("gender"),
+                request.getParameterValues("language"),
+                request.getParameter("country")
         );
         
         request.setAttribute("user", user);
