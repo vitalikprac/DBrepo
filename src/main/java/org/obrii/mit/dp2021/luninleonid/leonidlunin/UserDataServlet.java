@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name = "FormServlet", urlPatterns = {"/form"})
+@WebServlet(name = "UserDataServlet", urlPatterns = {"/form"})
 public class UserDataServlet extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)

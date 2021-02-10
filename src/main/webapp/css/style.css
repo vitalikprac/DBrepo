@@ -59,6 +59,19 @@ br{
 .button:hover { background: rgba(255,255,255,.2); }
 .button:active { background: white; }
 
+.return{
+    font-size: 18px;
+  background: #454545;
+  display: inline-block;
+  margin: 30px 10px;
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.5em 2.5em;
+  border: 2px solid;
+  transition: 0.2s;
+}
+
 .form_wrapper{
     font-size: 16pt;
     margin: 20px auto;

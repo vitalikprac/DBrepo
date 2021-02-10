@@ -2,10 +2,11 @@ package org.obrii.mit.dp2021.luninleonid.leonidlunin;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.ArrayList;
+
 
 public class UserContainer {
 
-    private int id;
     private String name;
     private String gender;
     private List<String> language;
@@ -19,8 +20,11 @@ public class UserContainer {
     public UserContainer(String name, String gender, String[] language, String country) {
         this.name = name;
         this.gender = gender;
-        if (language != null) this.language = Arrays.asList(language);
-        //if (language != null) Collections.addAll(this.language, language);                
+        
+        if (language != null ){
+            this.language = Arrays.asList(language);
+        }
+        
         this.country = country;
     }
 
