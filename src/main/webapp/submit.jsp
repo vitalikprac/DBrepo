@@ -32,7 +32,17 @@
         }
     %>
     </p><br>
-    <br/>
+    <br>
+    <p>Country: 
+    <%
+    String country = request.getParameter("country");
+    if (country == null) {
+        out.print("unknown");
+    }
+    else out.print(country);
+    %>
+    </p>
+    
     <a class="return" href="<%=request.getContextPath()%>">Return</a>
 </div>  
     

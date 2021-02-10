@@ -16,21 +16,26 @@
                 Gender: 
                 <input type="radio" name="gender" value="male">Male    
                 <input type="radio" name="gender" value="female">Female<br/>
-
-                Languages know: 
-                <div class="checkb">
-                    <input type="checkbox" name="language" value="English">English
-                    <input type="checkbox" name="language" value="Ukrainian">Ukrainian
-                    <input type="checkbox" name="language" value="French">French <br/>
+                
+                <div>
+                    Languages know: 
+                    <div class="checkb">
+                        <input type="checkbox" name="language" value="English">English
+                        <input type="checkbox" name="language" value="Ukrainian">Ukrainian
+                        <input type="checkbox" name="language" value="French">French <br/>
+                    </div>
                 </div>
-                Country: 
-                <select name="country">
-                    <option value="Ukraine">Ukraine</option>
-                    <option value="USA">USA</option>
-                    <option value="UK">UK</option>
-                    <option value="Finland">Finland</option>
-                    <option value="Fiji">Fiji</option>
-                </select><br/>
+                <div>
+                    Country: 
+                    <select name="country">
+                        <option value="Ukraine">Ukraine</option>
+                        <option value="USA">USA</option>
+                        <option value="UK">UK</option>
+                        <option value="Finland">Finland</option>
+                        <option value="Fiji">Fiji</option>
+                    </select><br/>
+                </div>
+
                 <button class="button" type="submit">Submit</button>
             </form>
 </div>
