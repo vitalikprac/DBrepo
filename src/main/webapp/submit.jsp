@@ -39,7 +39,7 @@
     if (country == null) {
         out.print("unknown");
     }
-    else out.print(country);
+    else out.print(countr);
     %>
     </p>
     
