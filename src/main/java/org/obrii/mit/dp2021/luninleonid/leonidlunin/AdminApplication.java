@@ -14,5 +14,4 @@ public class AdminApplication extends Application {
                 request.getParameterValues("language"),
                 request.getParameter("country"),isAdmin);
     }
-    
 }
