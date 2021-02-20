@@ -35,6 +35,7 @@
                         <option value="Fiji">Fiji</option>
                     </select><br/>
                 </div>
+                Are you admin?
                 <div class="checkb">
                         <input type="checkbox" name="isAdmin" value="on">
                 </div>
