@@ -35,7 +35,9 @@
                         <option value="Fiji">Fiji</option>
                     </select><br/>
                 </div>
-
+                <div class="checkb">
+                        <input type="checkbox" name="isAdmin" value="on">
+                </div>
                 <button class="button" type="submit">Submit</button>
             </form>
 </div>
