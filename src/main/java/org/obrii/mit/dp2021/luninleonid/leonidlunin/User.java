@@ -11,10 +11,6 @@ public class User implements UserInterface {
     private String country;
     private boolean isAdmin;
 
-    
-
-    
-    
     public User() {
     }
 
@@ -35,7 +31,7 @@ public class User implements UserInterface {
         return name;
     }
 
-    @Override
+    
     public void setName(String name) {
         this.name = name;
     }
@@ -45,7 +41,6 @@ public class User implements UserInterface {
         return gender;
     }
 
-    @Override
     public void setGender(String gender) {
         this.gender = gender;
     }
@@ -55,7 +50,6 @@ public class User implements UserInterface {
         return language;
     }
 
-    @Override
     public void setLanguage(List<String> language) {
         this.language = language;
     }
@@ -65,7 +59,6 @@ public class User implements UserInterface {
         return country;
     }
 
-    @Override
     public void setCountry(String country) {
         this.country = country;
     }

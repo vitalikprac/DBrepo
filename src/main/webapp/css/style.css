@@ -153,4 +153,13 @@ br{
     
 }
 
+.UML{
+    margin: 0 auto;
+    text-align: centre;
+}
+
+.UML img{
+    display: inline-block;
+}
+
 

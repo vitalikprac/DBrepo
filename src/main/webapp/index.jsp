@@ -18,5 +18,8 @@
                     <button class="button" type="submit">Open form</button>
                 </form>
             </div>
+            <div class="UML">
+                <img src="img/UML.jpg" alt="UML"/>
+            </div>
                     
 <jsp:include page="include/main_footer.jsp" />                  
