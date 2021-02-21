@@ -15,7 +15,10 @@ position: fixed;
   background-position: bottom, center;
   background-repeat: no-repeat;
 }
-
+.start{
+    height: auto;
+    position: absolute;
+}
 .title{
     font-weight: bold;
     margin: 40px;
@@ -152,14 +155,17 @@ br{
     }
     
 }
-
 .UML{
+    overflow: auto; 
+    text-align: center;
+    display: block;
     margin: 0 auto;
-    text-align: centre;
 }
 
-.UML img{
-    display: inline-block;
+img{
+    width: 80%; 
+    padding-top: 10px;
+    margin: 0 auto;
 }
 
 

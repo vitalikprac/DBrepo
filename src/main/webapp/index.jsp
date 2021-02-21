@@ -5,7 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<jsp:include page="include/main_header.jsp" />
+<jsp:include page="include/main_header_startpage.jsp" />
 
     <h1 class="title">Welcome to Leonid Lunin project!</h1>
             <h2>About me</h2>
