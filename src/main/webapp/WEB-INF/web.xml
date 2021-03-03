@@ -2,19 +2,19 @@
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
         <servlet-name>UserDataServlet</servlet-name>
-        <servlet-class>org.obrii.mit.dp2021.luninleonid.leonidlunin.UserDataServlet</servlet-class>
+        <servlet-class>org.obrii.mit.dp2021.luninleonid.leonidlunin.CRUD.UserDataServlet</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>UserContainer</servlet-name>
-        <servlet-class>org.obrii.mit.dp2021.luninleonid.leonidlunin.UserContainer</servlet-class>
+        <servlet-name>FormUD</servlet-name>
+        <servlet-class>org.obrii.mit.dp2021.luninleonid.leonidlunin.CRUD.FormUD</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>UserDataServlet</servlet-name>
-        <url-pattern>/form</url-pattern>
+        <url-pattern>/User</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>UserContainer</servlet-name>
-        <url-pattern>/UserContainer</url-pattern>
+        <servlet-name>FormUD</servlet-name>
+        <url-pattern>/form</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -4,8 +4,10 @@
     Author     : HP
 --%>
 
+<%@page import="java.util.List"%>
+<%@page import="org.obrii.mit.dp2021.luninleonid.leonidlunin.CRUD.Data"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<jsp:include page="include/main_header_startpage.jsp" />
+<jsp:include page="include/main_header.jsp" />
 
     <h1 class="title">Welcome to Leonid Lunin project!</h1>
             <h2>About me</h2>
@@ -14,12 +16,40 @@
                 BMW Software Engineer, Senior Security Engineer
             </div>
             <div class="menu">
-                <form action="<%=request.getContextPath()%>/form" method="get">
-                    <button class="button" type="submit">Open form</button>
-                </form>
-            </div>
-            <div class="UML">
-                <img src="img/UML.jpg" alt="UML"/>
+                <%List<Data> dataList = (List<Data>) request.getAttribute("data");%>
+                <table>
+                    <tr>
+                        <th>id</th>
+                        <th>name</th>
+                        <th>age</th>
+                        <th>gender</th>
+                        <th>email</th>
+                    </tr>
+                    <%for (Data data : dataList) {%>
+                    <tr>
+                        <td><%=data.getId()%></td>
+                        <td><%=data.getName()%></td>
+                        <td><%=data.getAge()%></td>
+                        <td><%=data.getGender()%></td>
+                        <td><%=data.getEmail()%></td>
+                        <td>
+                            <form action="<%=request.getContextPath()%>/form" method="post">
+                                <input type="hidden" name="id" value="<%=data.getId()%>">
+                                <input type="hidden" name="name" value="<%=data.getName()%>">
+                                <input type="hidden" name="age" value="<%=data.getAge()%>">
+                                <input type="hidden" name="gender" value="<%=data.getGender()%>">
+                                <input type="hidden" name="email" value="<%=data.getEmail()%>">
+                                <input type="submit" value="Update">
+                            </form>
+                        </td>
+                        <td>
+                            <form action="<%=request.getContextPath()%>/form" method="get">
+                                <input type="hidden" name="id" value="<%=data.getId()%>">
+                                <input type="submit" value="Delete">
+                            </form>
+                        </td>
+                       <%}%>
+                </table>
             </div>
                     
 <jsp:include page="include/main_footer.jsp" />                  
