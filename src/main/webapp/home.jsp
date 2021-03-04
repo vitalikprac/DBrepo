@@ -10,11 +10,6 @@
 <jsp:include page="include/main_header.jsp" />
 
     <h1 class="title">Welcome to Leonid Lunin project!</h1>
-            <h2>About me</h2>
-            <div class="about">
-                Student of Taras Shevchenko National University of Kyiv<br>
-                BMW Software Engineer, Senior Security Engineer
-            </div>
                 <%List<Data> dataList = (List<Data>) request.getAttribute("data");%>
                     <table class="styled-table">
                         <thead>
@@ -55,7 +50,13 @@
                         </tr>
                        <%}%>
                        <tr>
-                            <td colspan="7" class="ADDING">
+                           <td colspan="4">
+                               <form action= "<%=request.getContextPath()%>/" method="get">
+                                    <input type="text" name="search">
+                                    <input type="submit" value="search data">
+                               </form>
+                           </td>
+                            <td colspan="3">
                                 <form action="create.jsp" methd="get">
                                     <input type="submit" value="ADD USER" >
                                 </form>
@@ -63,7 +64,7 @@
                         </tr>
                         </tbody>
                     </table>
-                                                
+                                     
                 
             </div>
 		</div>

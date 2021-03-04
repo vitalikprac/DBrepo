@@ -19,7 +19,14 @@ public class UserDataServlet extends HttpServlet {
             Config.setFileName(this.getServletContext().getRealPath("") + "data.txt");
             CRUD = new FilesCrud(new File(Config.getFileName()));
         }
-        request.setAttribute("data", CRUD.readData());
+        
+        if(request.getParameter("search")!=null){
+            request.setAttribute("data", CRUD.sortData(request.getParameter("search")));
+            }
+        else{
+            request.setAttribute("data", CRUD.readData());
+        }
+        
         request.getRequestDispatcher("home.jsp").forward(request, response);
     }
 

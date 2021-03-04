@@ -179,7 +179,7 @@ img{
 }
 
 .styled-table thead tr {
-    background-color: #009879;
+    background-color: #235184;
     color: #ffffff;
 }
 
@@ -206,13 +206,8 @@ img{
 }
 
 .styled-table tbody tr {
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 2px solid #235184;
     background-color: #f3f3f3;
-}
-
-
-.styled-table tbody tr {
-    border-bottom: 2px solid #009879;
     font-weight: bold;
-    color: #009879;
+    color: #235184;
 }

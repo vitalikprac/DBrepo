@@ -106,6 +106,12 @@ public class FilesCrud implements CrudDataInterface {
         this.file = file;
     }
 
-    
-
+    public List<Data> sortData(String phrase) {
+        List<Data> newData = new ArrayList<>();
+        for (Data d : this.readData()) {
+            if(d.getName().contains(phrase)){
+                newData.add(d);}
+        }
+            return newData;
+    }
 }
