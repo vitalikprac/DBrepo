@@ -15,9 +15,11 @@
                 Student of Taras Shevchenko National University of Kyiv<br>
                 BMW Software Engineer, Senior Security Engineer
             </div>
-            <div class="menu">
+            <div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
                 <%List<Data> dataList = (List<Data>) request.getAttribute("data");%>
-                <table>
+                <table class="table100 ver3 m-b-110">
                     <tr>
                         <th>id</th>
                         <th>name</th>
@@ -33,7 +35,7 @@
                         <td><%=data.getGender()%></td>
                         <td><%=data.getEmail()%></td>
                         <td>
-                            <form action="<%=request.getContextPath()%>/form" method="post">
+                            <form action="update.jsp" method="post">
                                 <input type="hidden" name="id" value="<%=data.getId()%>">
                                 <input type="hidden" name="name" value="<%=data.getName()%>">
                                 <input type="hidden" name="age" value="<%=data.getAge()%>">
@@ -48,8 +50,16 @@
                                 <input type="submit" value="Delete">
                             </form>
                         </td>
+                    </tr>
+                    
+                        
                        <%}%>
                 </table>
+                <form action="create.jsp" methd="get">
+                        <input type="submit" value="ADD USER" >
+                </form>
             </div>
+		</div>
+	</div>
                     
 <jsp:include page="include/main_footer.jsp" />                  

@@ -5,57 +5,33 @@
 --%>
 
 <%@page import="java.util.List"%>
-<%@page import="org.obrii.mit.dp2021.luninleonid.leonidlunin.UserInterface"%>
-<%@page import="org.obrii.mit.dp2021.luninleonid.leonidlunin.Application"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <jsp:include page="include/main_header.jsp" />
 <div class="form_wrapper">
-    <%
-        
-        Application app = (Application)request.getAttribute("app");
-        UserInterface user = app.getUser();
-    %>
-    <p>Name is: <%= user.getName()%></p><br>
-    
-    <p>Gender is: 
-    <%
-    String gender = user.getGender();
-    if (gender == null) {
-        out.print("unknown");
-    }
-    else out.print(gender);
-    %>
-    </p><br>
+    <form action="<%=request.getContextPath()%>/form" method="post">
+                <input type="hidden" name="id" value="<%=request.getParameter("id")%>">
+                
+                Fill in form <br>
+                <input type="text" name="name" value="<%=request.getParameter("name")%>"><br/>
+                
+                <input type="text" name="age" value="<%=request.getParameter("age")%>"><br/>
+                
+                   
+                Gender: 
+                <%if (request.getParameter("gender").equals("male")) {%>
+                <input type="radio" name="gender" value="male" checked>Male
+                <input type="radio" name="gender" value="female">Female<br/>
+                <%}%>
+                
+                <%if (request.getParameter("gender").equals("female")) {%>
+                <input type="radio" name="gender" value="male">Male
+                <input type="radio" name="gender" value="female" checked>Female<br/>
+                <%}%>
+                <input type="text" name="email" value="<%=request.getParameter("email")%>"><br/>
 
-    <p>Languages is:
-    <%
-    List<String> languages = user.getLanguage();
-    if (languages != null) {
-    for (int i = 0; i < languages.size(); i++) {
-            out.print(languages.get(i)+" ");
-        }                 
-        }else {
-        out.print("no choose");
-        }
-    %>
-    </p><br>
-    <br>
-    <p>Country: 
-    <%
-    String country = user.getCountry();
-    if (country == null) {
-        out.print("unknown");
-    }
-    else out.print(country);
-    %>
-    </p>
-    <br>
-    <p>Privileges:  
-    <%=
-        user.getIsAdmin()
-    %>
-    </p>
+                <button class="button" type="submit">Update</button>
+    </form>
     <a class="return" href="<%=request.getContextPath()%>">Return</a>
 </div>  
     

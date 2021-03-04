@@ -10,7 +10,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>UserDataServlet</servlet-name>
-        <url-pattern>/User</url-pattern>
+        <url-pattern></url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>FormUD</servlet-name>

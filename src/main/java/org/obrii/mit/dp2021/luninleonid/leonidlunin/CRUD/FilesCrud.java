@@ -70,9 +70,9 @@ public class FilesCrud implements CrudDataInterface {
     @Override
     public void createData(Data addingData) {
         List<Data> data = this.readData();
+        addingData.setId(data.size());
         data.add(addingData);
         this.writeData(data);
-
     }
 
     @Override
