@@ -27,7 +27,6 @@ public class FilesCrud implements CrudDataInterface {
         this.file = file;
     }
 
-    @Override
     public void writeData(List<Data> data) {
 
         try ( FileOutputStream f = new FileOutputStream(file);  
@@ -48,6 +47,8 @@ public class FilesCrud implements CrudDataInterface {
         }
 
     }
+    
+    
 
     @Override
     public List<Data> readData() {

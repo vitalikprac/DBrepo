@@ -10,18 +10,16 @@ public class Data implements Serializable{
     private int age;
     private String gender;
     private String email;
-    boolean isAdmin;
 
     public Data() {
     }
 
-    public Data(int id, String name, int age, String gender, String email, boolean isAdmin) {
+    public Data(int id, String name, int age, String gender, String email) {
         this.id=id;
         this.name = name;
         this.age = age;
         this.gender = gender;
         this.email = email;
-        this.isAdmin=isAdmin;
     }
 
     public int getId() {
@@ -62,23 +60,6 @@ public class Data implements Serializable{
     public void setEmail(String email) {
         this.email = email;
     }
-
-    
-    public boolean isIsAdmin() {
-        return isAdmin;
-    }
-    public void setIsAdmin(boolean isAdmin) {
-        this.isAdmin = isAdmin;
-    }
-    
-    
-    
-
-    
-
-    
-
-    
 
     @Override
     public String toString() {
