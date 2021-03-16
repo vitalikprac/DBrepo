@@ -1,6 +1,5 @@
 package org.obrii.mit.dp2021.luninleonid.leonidlunin.CRUD;
 
-import java.io.File;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(name = "UserDataServlet", urlPatterns = {"/"})
 public class UserDataServlet extends HttpServlet {
-    CrudDataInterface CRUD = new PostgresCrud();
+    PostgresCrud CRUD = new PostgresCrud();
    
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

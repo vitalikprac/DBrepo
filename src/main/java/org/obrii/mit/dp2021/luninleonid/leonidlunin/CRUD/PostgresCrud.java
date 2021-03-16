@@ -1,9 +1,9 @@
 package org.obrii.mit.dp2021.luninleonid.leonidlunin.CRUD;
 
-import java.io.File;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -11,21 +11,22 @@ public class PostgresCrud implements CrudDataInterface {
     
     
     private Logger logger;
-    private Connection connection;
     private Statement statement;
+    private Connection connection;
     
     public PostgresCrud() {
         logger=Logger.getLogger(FilesCrud.class.getName());
-        
         //Connecting to db
         try {
             Class.forName("org.postgresql.Driver");
             this.connection = DriverManager.getConnection(Config.getURL(), Config.getDbUser(), Config.getDbPass());
             this.connection.setAutoCommit(false);
             this.statement = this.connection.createStatement();
-        } catch (Exception e) {
-            System.out.println("Connection exception!");
-            System.exit(1);
+        } 
+        catch (Exception e) {
+            e.printStackTrace();
+            System.err.println(e.getClass().getName()+": "+e.getMessage());
+            System.exit(0);
         }
         //creating table
         SQL("CREATE TABLE users ("
@@ -85,10 +86,10 @@ public class PostgresCrud implements CrudDataInterface {
     @Override
     public void updateData(int id, Data data) {  
         SQL(String.format("UPDATE users "
-                        + "SET name=" + data.getName()
-                        + "SET age=" + data.getAge()
-                        + "SET gender=" + data.getGender()
-                        + "SET email=" + data.getEmail()
+                        + "SET name='" + data.getName() + "' , "
+                        + "age=" + data.getAge() + " , "
+                        + "gender='" + data.getGender() + "' , "
+                        + "email='" + data.getEmail() + "' "
                 + "WHERE id="+id)
         );
     }
