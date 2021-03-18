@@ -61,13 +61,4 @@ public class Data implements Serializable{
         this.email = email;
     }
 
-    @Override
-    public String toString() {
-        return "Data{" + "id=" + id + ", name=" + name + ", age=" + age + ", email=" + email + '}';
-    }
-    
-    
-    
-    
-    
 }

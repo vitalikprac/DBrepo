@@ -3,13 +3,12 @@ package org.obrii.mit.dp2021.luninleonid.leonidlunin.CRUD;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class PostgresCrud implements CrudDataInterface {
     
-    
+    int id=1;
     private Logger logger;
     private Statement statement;
     private Connection connection;
@@ -76,13 +75,16 @@ public class PostgresCrud implements CrudDataInterface {
 
     @Override
     public void createData(Data data) {
+        List<Data> datasize = this.readData();
+        data.setId(datasize.size());
         SQL(String.format("INSERT INTO users (id, name, age, gender, email) VALUES (%d, '%s', %d, '%s', '%s');",
                 data.getId(), data.getName(), data.getAge(), data.getGender(), data.getEmail()));
     }
 
     @Override
-    public void deleteData(int id) {        
+    public void deleteData(int id) { 
         SQL("DELETE FROM users WHERE id="+id);
+        
     }
     
     @Override

@@ -1,7 +1,6 @@
 package org.obrii.mit.dp2021.luninleonid.leonidlunin.CRUD;
 
 import java.io.IOException;
-import java.sql.SQLException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
