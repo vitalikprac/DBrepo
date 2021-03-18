@@ -14,7 +14,7 @@ public class PostgresCrud implements CrudDataInterface {
     private Statement statement;
     private Connection connection;
     
-    public PostgresCrud() {
+    public PostgresCrud(){
         logger=Logger.getLogger(FilesCrud.class.getName());
         //Connecting to db
         try {
@@ -28,15 +28,17 @@ public class PostgresCrud implements CrudDataInterface {
             System.err.println(e.getClass().getName()+": "+e.getMessage());
             System.exit(0);
         }
-        //creating table
-        SQL("CREATE TABLE users ("
-                + "id integer primary key not null, "
-                + "name text not null, "
-                + "age integer not null, "
-                + "gender text not null, "
-                + "email text not null "
-                + ");");
-    }
+            SQL("CREATE TABLE IF NOT EXISTS users ("
+                        + "id integer primary key not null, "
+                        + "name text not null, "
+                        + "age integer not null, "
+                        + "gender text not null, "
+                        + "email text not null "
+                        + ");");
+            }
+        
+
+        
     
     private void SQL(String sql){
         try{
