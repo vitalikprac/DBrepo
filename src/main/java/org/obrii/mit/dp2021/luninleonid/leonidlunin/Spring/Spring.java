@@ -2,12 +2,18 @@ package org.obrii.mit.dp2021.luninleonid.leonidlunin.Spring;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
+import java.lang.Iterable;
+import org.apache.commons.collections4.IterableUtils;
 import org.obrii.mit.dp2021.luninleonid.leonidlunin.CRUD.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Spring {
+    int id=1;
+    
+    
     @Autowired
     SpringInterface DBInterface;
     
@@ -34,6 +40,8 @@ public class Spring {
     }
     
     public void createData(Data data){
+        //data.setId(this.id);
+        //id++;
         DBInterface.save(data);
     }
     
@@ -45,7 +53,8 @@ public class Spring {
         Data update = DBInterface.findById(id).get();
         update.setName(data.getName());
         update.setAge(data.getAge());
+        update.setGender(data.getGender());
+        update.setEmail(data.getEmail());
         DBInterface.save(update);
     }
-    
-}
+ }

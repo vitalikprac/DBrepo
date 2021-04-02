@@ -1,10 +1,11 @@
-package org.obrii.mit.dp2021.luninleonid.leonidlunin.CRUD;
+package org.obrii.mit.dp2021.luninleonid.leonidlunin.unused;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import org.obrii.mit.dp2021.luninleonid.leonidlunin.CRUD.Data;
 
 public class PostgresCrud implements CrudDataInterface {
     
@@ -73,7 +74,7 @@ public class PostgresCrud implements CrudDataInterface {
         
     }
 
-    @Override
+    //@Override
     public void createData(Data data) {
         List<Data> datasize = this.readData();
         data.setId(datasize.size());
@@ -87,7 +88,7 @@ public class PostgresCrud implements CrudDataInterface {
         
     }
     
-    @Override
+    //@Override
     public void updateData(int id, Data data) {  
         SQL(String.format("UPDATE users "
                         + "SET name='" + data.getName() + "' , "

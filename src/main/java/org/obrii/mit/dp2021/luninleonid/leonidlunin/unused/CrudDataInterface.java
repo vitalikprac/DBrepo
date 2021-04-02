@@ -1,6 +1,7 @@
-package org.obrii.mit.dp2021.luninleonid.leonidlunin.CRUD;
+package org.obrii.mit.dp2021.luninleonid.leonidlunin.unused;
 
 import java.util.List;
+import org.obrii.mit.dp2021.luninleonid.leonidlunin.CRUD.Data;
 
 public interface CrudDataInterface {
 

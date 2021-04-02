@@ -1,4 +1,4 @@
-package org.obrii.mit.dp2021.luninleonid.leonidlunin.CRUD;
+package org.obrii.mit.dp2021.luninleonid.leonidlunin.unused;
 
 public class Config {
     
