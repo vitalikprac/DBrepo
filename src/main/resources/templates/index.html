@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Leonid Lunin</title>
+        <link href="css/reset.css" rel="stylesheet" type="text/css"/>
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+    </head>
+    <body>
+        <div class="background">
+			<h1 class="title">Welcome to Leonid Lunin project!</h1>
+						<table class="styled-table">
+								<thead>
+									<tr>
+										<th>id</th>
+										<th>name</th>
+										<th>age</th>
+										<th>gender</th>
+										<th>email</th>
+										<th>...</th>
+										<th>X</th>
+									</tr>
+								</thead>
+								<tbody>
+									
+								<tr th:each="user : ${users}">
+									<td th:text="${user.id}"></td>
+									<td th:text="${user.name}"></td>
+									<td th:text="${user.age}"></td>
+									<td th:text="${user.gender}"></td>
+									<td th:text="${user.email}"></td>
+									<td>
+										<a th:href="@{/edit/{id}(id=${user.id})}">Edit</a>
+									</td>
+									<td>
+										<a th:href="@{/delete/{id}(id=${user.id})}">Delete</a>
+									</td>
+									
+								</tr>
+							   <tr>
+								   <td colspan="7">
+										<a href="./signup">ADD USER</a>
+									</td>
+								</tr>
+								</tbody>
+							</table>
+											 
+						
+					</div>
+				</div>
+			</div>
+		</div>
+			<!--===============================================================================================-->	
+			<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+		<!--===============================================================================================-->
+			<script src="vendor/bootstrap/js/popper.js"></script>
+			<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+		<!--===============================================================================================-->
+			<script src="vendor/select2/select2.min.js"></script>
+		<!--===============================================================================================-->
+			<script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+		<!--===============================================================================================-->
+			<script src="js/main.js"></script>
+
+			</body>
+		</html>            

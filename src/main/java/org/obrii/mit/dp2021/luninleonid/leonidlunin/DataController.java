@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
  *
  * @author Leonid
  */
-@Controller
+@Controller("/Lab6")
 public class DataController {
     @Autowired
     DataRepo dataRepo;

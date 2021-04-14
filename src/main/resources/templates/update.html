@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Leonid Lunin</title>
+        <link href="css/reset.css" rel="stylesheet" type="text/css"/>
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div class="background">
+            <div class="form_wrapper">
+				<form action="<%=request.getContextPath()%>/form" method="post">
+							<input type="hidden" name="id" value="<%=request.getParameter("id")%>">
+							
+							Fill in form <br>
+							<input type="text" name="name" value="<%=request.getParameter("name")%>" required><br/>
+							
+							<input type="text" name="age" value="<%=request.getParameter("age")%>" required><br/>
+							
+							   
+							Gender: 
+							<%if (request.getParameter("gender").equals("male")) {%>
+							<input type="radio" name="gender" value="male" checked>Male
+							<input type="radio" name="gender" value="female">Female<br/>
+							<%}%>
+							
+							<%if (request.getParameter("gender").equals("female")) {%>
+							<input type="radio" name="gender" value="male">Male
+							<input type="radio" name="gender" value="female" checked>Female<br/>
+							<%}%>
+							
+							<input type="text" name="email" value="<%=request.getParameter("email")%>"><br/>
+
+							<button class="button" type="submit">Update</button>
+				</form>
+				<a class="return" href="<%=request.getContextPath()%>">Return</a>
+			</div>  
+        </div>
+    <!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+	
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+    </body>
+</html>    
