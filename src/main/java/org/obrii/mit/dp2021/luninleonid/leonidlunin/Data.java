@@ -11,7 +11,6 @@ public class Data{
     private int id;
     @NotBlank(message="Name cannot be null")
     private String name;
-    @NotBlank(message="Age cannot be null")
     private int age;
     @NotBlank(message="Gender cannot be null")
     private String gender;

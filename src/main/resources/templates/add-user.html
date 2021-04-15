@@ -10,20 +10,20 @@
     <body>
         <div class="background">
 			<div class="form_wrapper">
-					<form action="#" th:action="@{/adduser}" th:object="${user}" method="post">
+					<form action="#" th:action="@{/adduser}" th:object="${data}" method="post">
 						Fill in form <br>
 							<label for="name">Name</label>
 							<input type="text" th:field="*{name}" id="name" placeholder="Your name">
 							<span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
 							
 							<label for="name">Age</label>
-							<input type="text" th:field="*{age}" id="age" placeholder="Age">
+							<input type="text" th:field="*{age}" id="age" placeholder="Age" required="required">
 							<span th:if="${#fields.hasErrors('age')}" th:errors="*{age}"></span>
 							
 							<label for="name">Gender</label>
-							<input type="radio" th:field="*{gander}" id="gender" value="male" required="required">Male    
-							<input type="radio" th:field="*{gander}" id="gender" value="female">Female<br/>
-							<span th:if="${#fields.hasErrors('gander')}" th:errors="*{gender}"></span>
+							<input type="radio" th:field="*{gender}" id="gender" value="male" required="required">Male    
+							<input type="radio" th:field="*{gender}" id="gender" value="female">Female<br/>
+							<span th:if="${#fields.hasErrors('gender')}" th:errors="*{gender}"></span>
 							
 							<label for="email">Email</label>
 							<input type="text" th:field="*{email}" id="email" placeholder="Email">
