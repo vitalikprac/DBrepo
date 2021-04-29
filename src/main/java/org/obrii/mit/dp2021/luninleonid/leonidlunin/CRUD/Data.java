@@ -8,7 +8,7 @@ public class Data {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     
-    private int id;
+    private long id;
     private String name;
     private int age;
     private String gender;
@@ -25,10 +25,10 @@ public class Data {
         this.email = email;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
     
