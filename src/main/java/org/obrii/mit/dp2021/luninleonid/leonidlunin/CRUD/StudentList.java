@@ -8,7 +8,7 @@ import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class StudentList {
    
-    @JsonProperty("student")
+    @JsonProperty("data")
     private List<Data> studentList;
 
     public StudentList() {

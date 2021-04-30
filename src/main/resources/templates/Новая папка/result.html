@@ -26,16 +26,20 @@
 								<tbody>
 									
 								<tr th:each="student:${students}">
-                                                                        <form action="./update" method="post">
-                                                                            <input type="hidden" name="url" th:value="${student.getHref()}">
-                                                                            <td><input type="text" name="name" th:value="${student.name}" required/></td>
-                                                                            <td><input type="text" name="age" th:value="${student.age}" required/></td> 
-                                                                            <td>
-                                                                                <input type="text" name="gender" th:value="${student.gender}" required/>
-                                                                            </td> 
-                                                                            <td><input type="text" name="email" th:value="${student.email}" required/></td>
-                                                                            <td><input type="submit" value="update"/></td>
-                                                                        </form>
+									<td th:text="${student.name}"></td>
+									<td th:text="${student.age}"></td>
+									<td th:text="${student.gender}"></td>
+									<td th:text="${student.email}"></td>
+									<td>
+										<form action="./update" method="post">
+											<input type="hidden" name="url" th:value="${student.getHref()}">
+											<input type="text" name="name" th:value="${student.name}"/>
+											<input type="text" name="age" th:value="${student.age}"/>
+											<input type="text" name="gender" th:value="${student.gender}"/>
+											<input type="text" name="email" th:value="${student.email}"/>
+											<input type="submit" value="update"/>
+										</form>
+									</td>
 									<td>
 										<form action="./delete" method="post">
 											<input type="hidden" name="url" th:value="${student.getHref()}">                
@@ -47,17 +51,16 @@
 							   <tr>
 								   <form action="./add" method="post">
 										<td>
-											<input type="text" name="name" placeholder="Enter name" required/>
+											<input type="text" name="name" placeholder="Enter name"/>
 										</td>
 										<td>
-											<input type="text" name="age" placeholder="Enter age" required/>
+											<input type="text" name="age" placeholder="Enter age"/>
 										</td>
 										<td>
-											<input type="radio" name="gender" value="male" checked>Male
-                                                                                        <input type="radio" name="gender" value="female" >Female
+											<input type="text" name="gender" placeholder="Enter gender"/>
 										</td>
 										<td>
-											<input type="text" name="email" placeholder="Enter email" required/>
+											<input type="text" name="email" placeholder="Enter email"/>
 										</td>
 										<td>
 											<input type="submit" value="Add new"/>
