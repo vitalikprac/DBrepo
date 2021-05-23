@@ -3,5 +3,5 @@
 # and open the template in the editor.
 FROM openjdk:11-jdk-slim
 MAINTAINER obrii.org
-COPY target/LeonidLunin-01.jar docker2.jar
+COPY src/main/resources/LeonidLunin-01.jar docker2.jar
 ENTRYPOINT ["java","-jar","/docker2.jar"]
